@@ -1157,9 +1157,15 @@ h1, h2, h3, h4 {
 }
 
 .type-option .type-icon {
-  font-size: 1.6rem;
-  margin-bottom: 12px;
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--gold-500);
+  margin-bottom: 16px;
 }
 
 .type-option h3 {
@@ -1297,6 +1303,16 @@ h1, h2, h3, h4 {
 
   .hero-visual {
     margin-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hero-badge {
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    margin: 0 auto;
+    width: fit-content;
+    max-width: calc(100% - 24px);
   }
 
   .dmit-steps {
