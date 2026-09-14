@@ -1,0 +1,13 @@
+{
+  "name": "ashish-sukhadiya-counseling",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal website for Ashish Sukhadiya - Student Counselor, Teacher & DMIT Counsellor",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "mongodb": "^6.9.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Appointments Dashboard | Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body class="admin-body">
+
+  <header class="admin-topbar">
+    <div class="container">
+      <a href="dashboard.html" class="brand">
+        <span class="brand-mark">AS</span>
+        <span class="brand-name">
+          <strong>Admin Dashboard</strong>
+          <span>Appointments</span>
+        </span>
+      </a>
+      <button class="btn btn-outline" id="logoutBtn">Log Out</button>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <div class="container">
+
+      <div class="admin-stats">
+        <div class="admin-stat-card">
+          <strong id="statTotal">0</strong>
+          <span>Total Requests</span>
+        </div>
+        <div class="admin-stat-card">
+          <strong id="statPending">0</strong>
+          <span>Pending</span>
+        </div>
+        <div class="admin-stat-card">
+          <strong id="statConfirmed">0</strong>
+          <span>Confirmed</span>
+        </div>
+        <div class="admin-stat-card">
+          <strong id="statDmit">0</strong>
+          <span>DMIT Requests</span>
+        </div>
+      </div>
+
+      <div class="admin-filters" id="filters">
+        <button class="admin-filter-btn active" data-filter="all">All</button>
+        <button class="admin-filter-btn" data-filter="counseling">Counseling</button>
+        <button class="admin-filter-btn" data-filter="dmit">DMIT</button>
+        <button class="admin-filter-btn" data-filter="pending">Pending</button>
+        <button class="admin-filter-btn" data-filter="confirmed">Confirmed</button>
+        <button class="admin-filter-btn" data-filter="completed">Completed</button>
+        <button class="admin-filter-btn" data-filter="cancelled">Cancelled</button>
+      </div>
+
+      <div class="admin-table-wrap">
+        <div id="loadingState" class="loading-state">Loading appointments…</div>
+        <table class="admin-table" id="appointmentsTable" style="display: none;">
+          <thead>
+            <tr>
+              <th>Submitted</th>
+              <th>Type</th>
+              <th>Contact</th>
+              <th>Student</th>
+              <th>Preferred Slot</th>
+              <th>Message</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="appointmentsBody"></tbody>
+        </table>
+        <div id="emptyState" class="empty-state" style="display: none;">No appointment requests found.</div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

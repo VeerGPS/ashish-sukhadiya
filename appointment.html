@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book an Appointment | Ashish Sukhadiya</title>
+  <meta name="description" content="Book a student counseling session or a DMIT (Dermatoglyphics Multiple Intelligence Test) appointment with Ashish Sukhadiya." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="navbar scrolled">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">AS</span>
+        <span class="brand-name">
+          <strong>Ashish Sukhadiya</strong>
+          <span>Student Counselor</span>
+        </span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#dmit">DMIT Test</a>
+        <a href="index.html#testimonials">Testimonials</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="appointment.html" class="btn btn-outline">Book Appointment</a>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Book an Appointment</div>
+      <h1>Let's Plan the Right Next Step Together</h1>
+      <p>Choose a counseling session or a DMIT test below, and share a few details — I'll confirm your slot by email or phone.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 40px;">
+    <div class="container booking-wrap">
+
+      <form id="appointmentForm" novalidate>
+        <div class="type-switch">
+          <label class="type-option active" data-type="counseling">
+            <input type="radio" name="type" value="counseling" checked />
+            <span class="type-icon">💬</span>
+            <h3>Counseling Session</h3>
+            <p>Academic, career, personal, or parent counseling.</p>
+          </label>
+
+          <label class="type-option" data-type="dmit">
+            <input type="radio" name="type" value="dmit" />
+            <span class="type-icon">🧬</span>
+            <h3>DMIT Test</h3>
+            <p>Fingerprint-based multiple intelligence assessment.</p>
+          </label>
+        </div>
+
+        <div class="form-card">
+          <div id="formFeedback" class="form-feedback"></div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="e.g. Ramesh Patel" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g. 98765 43210" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="form-row" id="studentFields">
+            <div class="form-group">
+              <label for="studentName">Student's Name</label>
+              <input type="text" id="studentName" name="studentName" placeholder="If booking on behalf of a child" />
+            </div>
+            <div class="form-group">
+              <label for="studentAge">Student's Age / Class</label>
+              <input type="text" id="studentAge" name="studentAge" placeholder="e.g. 12 years / Class 7" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="preferredDate">Preferred Date *</label>
+              <input type="date" id="preferredDate" name="preferredDate" required />
+            </div>
+            <div class="form-group">
+              <label for="preferredTime">Preferred Time</label>
+              <select id="preferredTime" name="preferredTime">
+                <option value="">Any time</option>
+                <option value="Morning (9am - 12pm)">Morning (9am - 12pm)</option>
+                <option value="Afternoon (12pm - 4pm)">Afternoon (12pm - 4pm)</option>
+                <option value="Evening (4pm - 7pm)">Evening (4pm - 7pm)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Anything you'd like me to know?</label>
+            <textarea id="message" name="message" placeholder="Briefly describe your concern or what you'd like to discuss..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Confirm Appointment Request</button>
+          <p class="form-note">This sends a request only — I will personally confirm your exact slot by email or phone.</p>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Ashish Sukhadiya. All rights reserved.</span>
+        <span>Student Counselor · DMIT Counsellor</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+  <script src="js/appointment.js"></script>
+</body>
+</html>
